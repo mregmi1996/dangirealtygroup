@@ -1,7 +1,7 @@
 @import '../../styles/utilities.scss';
 
 .main-footer {
-    height: 300px;
+    height: 400px;
     background-color: rgba(240, 238, 238, 0.651);
     margin-bottom: -1px;
     color: rgba(0, 0, 0, 0.726);
@@ -15,8 +15,6 @@
 
     .left-footer {
         @include flexProperties(false, false);
-
-        text-align: right;
         width: 700px;
         margin: auto;
     }

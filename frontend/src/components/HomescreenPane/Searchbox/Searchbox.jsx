@@ -35,7 +35,7 @@ const Searchbox = (props) => {
                             id="demo-simple-select-autowidth"
                             value={apartment}
                             onChange={handleChange}
-                            autoWidth
+                            minWidth={300}
                             label="Apartment Type">
                             <MenuItem value={20}>Apartments</MenuItem>
                             <MenuItem value={21}>Houses</MenuItem>

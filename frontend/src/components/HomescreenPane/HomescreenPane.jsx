@@ -9,6 +9,7 @@ import HomepageCards from './HomepageaCards/HomepageCards';
 import buyAHouse from '../../assets/images/buy-a-house.jpeg'; 
 import sellAHouse from '../../assets/images/sell-a-house.jpeg';
 import talkToAgent from '../../assets/images/talk-to-agent.jpeg';
+import JoinUs from './JoinUs/JoinUs';
 // import { useStateValue } from '../../../Store/StateProvider';
 
 
@@ -65,6 +66,9 @@ const HomescreenPane = (props) => {
                 <HomepageCards image={buyAHouse} title="Buy A Property" typography={buyAProperty} className="options-card"/>
                 <HomepageCards image={sellAHouse} title="Sell A Property" typography={sellAProperty} className="options-card"/>
                 <HomepageCards image={talkToAgent} title="Talk To A Realtor" typography={talkToARealtor} className="options-card"/>
+            </div>
+            <div className="join-us-today">
+                <JoinUs />
             </div>
 
         </div>
