@@ -10,9 +10,10 @@ const Header = () => {
             </div>
             <div>
             <ul>
-                <li><a>Find Listings</a></li>
-                <li><a>Top Properties</a></li>
-                <li><a>About Us</a></li>
+                <li><a>Buy</a></li>
+                <li><a>Sell</a></li>
+                <li><a>Agents</a></li>
+                <li><a>Join Us!</a></li>
             </ul>
             </div>
             <div className="login">
