@@ -3,7 +3,7 @@ import './HomescreenPane.scss';
 import img1 from '../../assets/images/realty-image-1.jpeg';
 import img2 from '../../assets/images/realty-image-2.jpeg';
 import img3 from '../../assets/images/realty-image-3.jpeg';
-import Searchbox from './Searchbox/Searchbox';
+import Searchbox from '../Searchbox/Searchbox';
 import Aboutus from './Aboutus/Aboutus';
 import HomepageCards from './HomepageaCards/HomepageCards';
 import buyAHouse from '../../assets/images/buy-a-house.jpeg'; 

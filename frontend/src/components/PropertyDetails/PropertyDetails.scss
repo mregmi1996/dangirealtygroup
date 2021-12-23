@@ -1,0 +1,93 @@
+.property-details{
+    margin:30px;
+    .property-info-container{
+        display: flex;
+        height: fit-content;
+        .property-side-bar{
+            background-color: rgb(231, 226, 226);
+            height: 470px;
+            margin: 0px 50px 50px 50px;
+            padding: 10px;
+            .property-info-box{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-auto-flow: row;
+                width: 700px;
+                gap: 10px;
+                padding: 20px;
+            }
+            .property-info-box-2{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-auto-flow: row;
+                width: 700px;
+                gap: 10px;
+                padding: 20px;
+                .amnity-item{
+                    font-size: larger;
+                }
+            }
+        }
+    }
+    img{
+        width: 700px;
+        height: 450px;
+    }
+    .property-details-slider{
+        margin-top: 40px;
+        margin-left: 30px;
+        position: relative;
+        height: 100vh;
+        display: flex;
+    }
+    .right-arrow {
+        position: absolute;
+        margin-top: 200px;
+        margin-left: 650px;
+        font-size: 3rem;
+        color: #000;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+      }
+      
+      .left-arrow {
+        position: absolute;
+        margin-top: 200px;
+        font-size: 3rem;
+        color: #000;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+      }
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }
+}
+.header-1{
+    padding-left: 20px;
+    margin: 0px;
+}
+.header-2{
+    padding-left: 20px;
+    color: gray;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+p2{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+p1{
+    font-size: larger;
+    padding-left: 30px;
+}

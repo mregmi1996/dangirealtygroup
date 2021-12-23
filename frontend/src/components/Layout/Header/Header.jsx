@@ -1,8 +1,16 @@
-import headerLogo from '../../assets/images/header_logo.png';
+import headerLogo from '../../../assets/images/header_logo.png';
+import { useNavigate } from 'react-router-dom';
 import './Header.scss';
 
 
 const Header = () => {
+    const navigate = useNavigate();
+    const buyClickHandler = ()=>{
+        navigate("/buy");
+    }
+    const agentsClickHandler=()=>{
+        navigate("/agents");
+    }
     return (
         <div className="header">
             <div className="header-logo">
@@ -10,9 +18,9 @@ const Header = () => {
             </div>
             <div>
             <ul>
-                <li className="header-li"><a>Buy</a></li>
+                <li className="header-li" onClick={()=>buyClickHandler()}><a>Buy</a></li>
                 <li className="header-li"><a>Sell</a></li>
-                <li className="header-li"><a>Agents</a></li>
+                <li className="header-li" onClick={()=>agentsClickHandler()}><a>Agents</a></li>
                 <li className="header-li"><a>Join Us!</a></li>
             </ul>
             </div>

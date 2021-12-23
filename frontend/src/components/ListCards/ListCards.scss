@@ -1,0 +1,13 @@
+.our-listings{
+    margin-left: 30px;
+}
+.housing-lists{
+    margin: 20px 0px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 4;
+    gap: 40px;
+    grid-column-gap: 0px;
+    grid-auto-flow: row;
+    width: 100%;
+}
