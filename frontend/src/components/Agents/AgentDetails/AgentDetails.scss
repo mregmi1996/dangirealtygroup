@@ -1,0 +1,44 @@
+.agent-details-main-container{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    .agent-details{
+        display: flex;
+        .agent-name{
+            margin-left: 10px;
+        }
+        .agent-pic{
+            margin:20px;
+            img{
+                height:500px;
+                width:500px;
+            }
+        }
+        .agent-about-container{
+            .agent-about{
+                margin: 20px 450px 20px 20px;
+                font-size: larger;
+                height: fit-content;
+                max-height: 300px;
+                text-align: justify;
+            }
+            .agent-contact{
+                height:180px;
+                margin-left: 20px;
+                display: flex;
+                .agent-contact-email{
+                    margin-right: 50px;
+                }
+                a{
+                    text-decoration: none;
+                    display: flex;
+                    .contact-email{
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+    .agent-listings{
+
+    }
+}

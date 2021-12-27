@@ -1,28 +1,31 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './PropertyDetails.scss';
 import image_1 from '../../assets/images/temp.jpeg';
+import Button from '@mui/material/Button';
+import { FaQuestionCircle, FaWalking, FaPhone } from 'react-icons/fa';
+// import SendIcon from '@mui/icons-material/Send';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const PropertyDetails = (props) =>{
+const PropertyDetails = (props) => {
     const [current, setCurrent] = useState(0);
-    
-    const images=[
-        {image_item:image_1},
-        {image_item:image_1},
-        {image_item:image_1},
-        {image_item:image_1}
+
+    const images = [
+        { image_item: image_1 },
+        { image_item: image_1 },
+        { image_item: image_1 },
+        { image_item: image_1 }
     ]
-    const length=images.length;
-    if(!Array.isArray(images)||images.length<=0){
+    const length = images.length;
+    if (!Array.isArray(images) || images.length <= 0) {
         return null;
     }
-    const prevSlide=()=>{
-        setCurrent(current===0 ? length-1 : current-1)
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1)
     }
-    const nextSlide=()=>{
-        setCurrent(current===length-1 ? 0 : current+1)
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1)
     }
-    return(
+    return (
         <div className="property-details">
             <div className="property-details-description">
                 <h1 className="header-1">30 Henry St, Medford, MA</h1>
@@ -32,23 +35,23 @@ const PropertyDetails = (props) =>{
                 <div className="property-details-slider">
                     <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
                     <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-                    {images.map((image, index)=>{
-                        return(
-                            <div 
-                                className={index===current?'slide active':'slide'} 
+                    {images.map((image, index) => {
+                        return (
+                            <div
+                                className={index === current ? 'slide active' : 'slide'}
                                 key={index}
                             >
-                                {index===current &&(
+                                {index === current && (
                                     <img src={image.image_item}></img>
                                 )}
                             </div>
-                            
+
                         )
                     })}
                 </div>
                 <div className="property-side-bar">
                     <h1>Property Details:</h1>
-                    <hr/>
+                    <hr />
                     <div className="property-info-box">
                         <div className="property-type">
                             <p2>Property Type: </p2> <p1>Apartment</p1>
@@ -58,6 +61,9 @@ const PropertyDetails = (props) =>{
                         </div>
                         <div className="property-type">
                             <p2>City: </p2> <p1>Medford</p1>
+                        </div>
+                        <div className="property-type">
+                            <p2>Zip Code: </p2> <p1>02145</p1>
                         </div>
                         <div className="property-type">
                             <p2>Bedrooms: </p2> <p1>3</p1>
@@ -70,7 +76,7 @@ const PropertyDetails = (props) =>{
                         </div>
                     </div>
                     <h1>Amnities:</h1>
-                    <hr/>
+                    <hr />
                     <div className="property-info-box-2">
                         <div className="amnity-item">
                             Balcony
@@ -92,7 +98,18 @@ const PropertyDetails = (props) =>{
                         </div>
                     </div>
                 </div>
-                
+
+            </div>
+            <div className="property-action-items">
+                <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
+                    Contact Agent <FaPhone style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
+                </Button>
+                <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
+                    Schedule a tour <FaWalking style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
+                </Button>
+                <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
+                    Ask a question  <FaQuestionCircle style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
+                </Button>
             </div>
         </div>
     )

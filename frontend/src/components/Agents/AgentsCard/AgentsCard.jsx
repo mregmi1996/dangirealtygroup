@@ -26,7 +26,7 @@ const AgentsCard = () => {
                 </CardContent>
                 <CardActions>
                     <Button size="large">View</Button>
-                    <Button size="large">Contact Now</Button>
+                    <Button size="large"><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com" target="_blank">Contact Now</a></Button>
                 </CardActions>
             </Card>
         </div>

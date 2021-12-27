@@ -2,7 +2,9 @@ import React from 'react';
 import AgentsCard from './AgentsCard/AgentsCard';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+
 import './Agents.scss';
+import ContactModal from '../ContactModal/ContactModal';
 
 const Agents = () => {
     const agentsList=[
@@ -12,6 +14,10 @@ const Agents = () => {
     ]
     return (
         <div className="agents-main-container">
+            <div className="modal">
+            {/* <ContactModal /> */}
+            </div>
+            <div>
             <div className="agents-title">
                 <h1>Meet Our Realtors</h1>
             </div>
@@ -32,6 +38,7 @@ const Agents = () => {
                 <AgentsCard />
                 <AgentsCard />
 
+            </div>
             </div>
         </div>
     )
