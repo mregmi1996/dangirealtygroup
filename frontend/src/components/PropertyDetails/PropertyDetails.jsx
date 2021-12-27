@@ -3,8 +3,8 @@ import './PropertyDetails.scss';
 import image_1 from '../../assets/images/temp.jpeg';
 import Button from '@mui/material/Button';
 import { FaQuestionCircle, FaWalking, FaPhone } from 'react-icons/fa';
-// import SendIcon from '@mui/icons-material/Send';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import AgentDescription from '../Agents/AgentDescription/AgentDescription';
 
 const PropertyDetails = (props) => {
     const [current, setCurrent] = useState(0);
@@ -111,6 +111,7 @@ const PropertyDetails = (props) => {
                     Ask a question  <FaQuestionCircle style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
                 </Button>
             </div>
+            <AgentDescription/>
         </div>
     )
 }
