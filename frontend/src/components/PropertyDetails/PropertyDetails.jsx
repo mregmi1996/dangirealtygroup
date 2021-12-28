@@ -5,9 +5,11 @@ import Button from '@mui/material/Button';
 import { FaQuestionCircle, FaWalking, FaPhone } from 'react-icons/fa';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import AgentDescription from '../Agents/AgentDescription/AgentDescription';
+import CustomModal from '../CustomModal/CustomModal';
 
 const PropertyDetails = (props) => {
     const [current, setCurrent] = useState(0);
+    const [displayModal, setDisplayModal] = useState("hide");
 
     const images = [
         { image_item: image_1 },
@@ -25,6 +27,21 @@ const PropertyDetails = (props) => {
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
     }
+
+    // used to control the display of update info Modal form
+    const changeDisplayStyle = (str) => {
+        if(str == "view") {
+        setDisplayModal("display");
+        }
+        else if(str == "close"){
+        setDisplayModal("hide");
+        }
+    }
+
+    const submitQuestion = () => {
+
+    }
+
     return (
         <div className="property-details">
             <div className="property-details-description">
@@ -101,13 +118,29 @@ const PropertyDetails = (props) => {
 
             </div>
             <div className="property-action-items">
-                <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
+                <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }} onClick={() => changeDisplayStyle("view")}>
                     Contact Agent <FaPhone style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
                 </Button>
                 <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
                     Schedule a tour <FaWalking style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
                 </Button>
             </div>
+            <CustomModal modalWidth="w-50percent" displayStyle={displayModal} title="Ask a question about this property." subtitle="Let us know what you need and we'll be right back to you." changeDisplayStyle={changeDisplayStyle}>
+                  <div>
+                          {/* <form> */}
+                              {/* <label for="username">Name: </label> */}
+                              <input className="m-bottom20" type="text" id="name" name="name" defaultValue={"Test Name"}></input><br></br>
+                              {/* <label for="tagline">Email: </label> */}
+                              <input className="m-bottom20" type="text" id="email" name="email" defaultValue={"testemail@gmail.com"}></input><br></br>
+                              {/* <label for="desc">Phone: </label> */}
+                              <input className="m-bottom20" type="text" id="phone" name="phone" placeholder="Phone (optional)"></input><br></br>
+                              <textarea className="m-bottom20" type="text" id="comment" name="comment" placeholder="Comments" rows="2"></textarea><br></br>
+                              <div className="center">
+                                <button name="send" onClick={submitQuestion} className="p-10 btnHover">SEND</button>
+                              </div>
+                          {/* </form> */}
+                    </div>
+            </CustomModal>
             <AgentDescription/>
         </div>
     )

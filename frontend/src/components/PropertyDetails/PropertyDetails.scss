@@ -95,3 +95,43 @@ p1{
     font-size: larger;
     padding-left: 30px;
 }
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+button[name="send"] {
+    display: inline-block;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #19469D;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 20px;
+    height: 40px;
+    width: 15%;
+    color: #19469D;
+}
+
+button[name="send"]:hover {
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #19469D;
+}
