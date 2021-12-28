@@ -107,9 +107,6 @@ const PropertyDetails = (props) => {
                 <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
                     Schedule a tour <FaWalking style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
                 </Button>
-                <Button variant="contained" style={{width: '225px', height: '80px', margin:"5px" }}>
-                    Ask a question  <FaQuestionCircle style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
-                </Button>
             </div>
             <AgentDescription/>
         </div>
