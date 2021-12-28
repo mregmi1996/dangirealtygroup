@@ -5,7 +5,7 @@ import AgentDescription from '../AgentDescription/AgentDescription';
 const AgentDetails=(props)=>{
     return(
         <div>
-           <AgentDescription />
+           <AgentDescription selectedRealtor={props.selectedRealtor}/>
             <div className="agent-listings">
                 <ListCards text="My Listings:"/>
             </div>

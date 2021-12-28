@@ -5,7 +5,7 @@ const RealtorSchema = new Mongoose.Schema({
         type: String,
         required: "Name is required"
     },
-    "email-id":{
+    "email_id":{
         type: String,
         required: "Email Id is required"
     },
