@@ -6,10 +6,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
+import { changeSelectedRealtor } from '../../../actions/changeSelectedRealtor';
+import { useDispatch } from 'react-redux';
+import { actionTypes } from '../../../reducers/realtor';
 
-const AgentsCard = () => {
+const AgentsCard = ({realtor}) => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const viewAgentClickHandler=()=>{
+        dispatch({
+            type: actionTypes.UPDATE_SELECTED_REALTOR,
+            name: realtor.name,
+            email_id: realtor.email_id,
+            phone: realtor.phone,
+            description: realtor.description
+        })
         navigate("/agentDetails")
     }
     return (
@@ -23,10 +34,11 @@ const AgentsCard = () => {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        Agent
+                        {realtor.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Agent Contact
+                        {realtor.email_id} <br/>
+                        {realtor.phone}
                     </Typography>
                 </CardContent>
                 <CardActions>

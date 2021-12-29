@@ -1,46 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AgentsCard from './AgentsCard/AgentsCard';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 
 import './Agents.scss';
-import ContactModal from '../ContactModal/ContactModal';
 
 const Agents = () => {
-    const agentsList=[
-        {label:"Kumar Sigh Dangi"},
-        {label:"Andre Dangi"},
-        {label:"David Shepperd"},
-    ]
-    return (
-        <div className="agents-main-container">
-            <div className="modal">
-            {/* <ContactModal /> */}
+    const [realtors, setRealtors] = useState([]);
+    const [agentsList, setAgentsList] = useState([]);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        fetch("http://localhost:4000/getAllRealtors/", {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+            },
+        }).then((response) => response.json())
+            .then((resp) => {
+                setRealtors(resp);
+                const agentNameList = [];
+                resp.map((agents, index) => {
+                    agentNameList.push(agents.name)
+                })
+                setAgentsList(agentNameList);
+                setLoading(false);
+            })
+    }, [])
+    if (loading) {
+        return (<div>
+            Loading.....
+        </div>)
+    }
+    else {
+        return (
+            <div className="agents-main-container">
+                <div className="modal">
+                    {/* <ContactModal /> */}
+                </div>
+                <div>
+                    <div className="agents-title">
+                        <h1>Meet Our Realtors</h1>
+                    </div>
+                    <div className="search-by-name">
+                        <p className="search-by-name-text">Search by name:</p>
+                        <Autocomplete
+                            disablePortal
+                            id="combo-box-demo"
+                            options={agentsList}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Agents" />}
+                        />
+                    </div>
+                    <div className="realtors-card">
+                        {
+                            realtors.map((realtor, index) => {
+                                return (<AgentsCard realtor={realtor}/>)
+                            })}
+                    </div>
+                </div>
             </div>
-            <div>
-            <div className="agents-title">
-                <h1>Meet Our Realtors</h1>
-            </div>
-            <div className="search-by-name">
-                <p className="search-by-name-text">Search by name:</p>
-                <Autocomplete
-                    disablePortal
-                    id="combo-box-demo"
-                    options={agentsList}
-                    sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label="Agents" />}
-                />
-            </div>
-            <div className="realtors-card">
-                <AgentsCard />
-                <AgentsCard />
-                <AgentsCard />
-                <AgentsCard />
-                <AgentsCard />
-
-            </div>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 export default Agents;
