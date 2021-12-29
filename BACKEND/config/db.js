@@ -1,7 +1,13 @@
 import configDb from './db.config.js';
 import mongoose from 'mongoose';
 
-mongoose.connect(`${configDb.URI}://${configDb.USERNAME}:${configDb.PASSWORD}@${configDb.HOST}/${configDb.DB}`, {
+const URI = process.env.URI;
+const USERNAME = process.env.USERNAME;
+const PASSWORD = process.env.PASSWORD;
+const HOST = process.env.HOST;
+const DB = process.env.DB;
+
+mongoose.connect(`${URI}://${USERNAME}:${PASSWORD}@${HOST}/${DB}`, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
