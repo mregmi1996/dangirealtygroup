@@ -1,4 +1,3 @@
-import configDb from './db.config.js';
 import mongoose from 'mongoose';
 
 const URI = process.env.URI;
