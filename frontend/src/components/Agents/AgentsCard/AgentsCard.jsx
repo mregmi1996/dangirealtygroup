@@ -6,7 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
-import { changeSelectedRealtor } from '../../../actions/changeSelectedRealtor';
 import { useDispatch } from 'react-redux';
 import { actionTypes } from '../../../reducers/realtor';
 
