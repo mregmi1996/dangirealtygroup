@@ -49,4 +49,5 @@ const AgentsCard = ({realtor}) => {
     )
 }
 
+
 export default AgentsCard;
