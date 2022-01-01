@@ -108,7 +108,7 @@ const PropertyDetails = (props) => {
                     Schedule a tour <FaWalking style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
                 </Button>
             </div>
-            <AgentDescription/>
+            <AgentDescription selectedRealtor={props.selectedRealtor}/>
         </div>
     )
 }
