@@ -19,7 +19,7 @@ function App() {
           <Route path="/buy" element={<Layout component={<BuyScreen />} />} />
           <Route path="/agents" element={<Layout component={<Agents />} />} />
           <Route path="/agentDetails" element={<Layout component={<AgentDetails selectedRealtor={selectedRealtor}/>} />} />
-          <Route path="/viewProperty" element={<Layout component={<PropertyDetails name={"Kumar Dangi"}/>} />} />
+          <Route path="/viewProperty" element={<Layout component={<PropertyDetails selectedRealtor={selectedRealtor}/>} />} />
         </Routes>
       </Router>
     </div>

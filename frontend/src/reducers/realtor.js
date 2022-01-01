@@ -15,7 +15,15 @@ const realtorReducer=(state=null, action)=>{
                 }
             }
         default:
-            return state;
+            return{
+                ...state,
+                realtor:{
+                    name: "Kumar Singh Dangi",
+                    email_id: "kumar@dangirealtygroup.com",
+                    phone: "(617)-319-8410",
+                    description: "Kumar Dangi has been a trusted real estate professional for over 15 years. His passion is bringing together people and spaces in meaningful ways. In a business that is as much about who you know as what you know, Kumar Dangi has the knowledge, connections, and passions to make your real estate dreams come true."
+                }
+            }
     }
 }
 

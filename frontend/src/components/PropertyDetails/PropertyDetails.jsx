@@ -141,7 +141,7 @@ const PropertyDetails = (props) => {
                           {/* </form> */}
                     </div>
             </CustomModal>
-            <AgentDescription/>
+            <AgentDescription selectedRealtor={props.selectedRealtor}/>
         </div>
     )
 }
