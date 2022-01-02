@@ -139,7 +139,7 @@ const PropertyDetails = (props) => {
                     Schedule a tour <FaWalking style={{fontSize:'25px', paddingBottom:'4px', paddingLeft:'5px'}}/>
                 </Button>
             </div>
-            <CustomModal modalWidth="w-50percent" displayStyle={displayModal} title="Ask a question about this property." subtitle="Let us know what you need and we'll be right back to you." changeDisplayStyle={changeDisplayStyle}>
+            <CustomModal icon="comment" modalWidth="w-50percent" displayStyle={displayModal} title="Ask a question about this property." subtitle="Let us know what you need and we'll be right back to you." changeDisplayStyle={changeDisplayStyle}>
                   <div>
                           {/* <form> */}
                               {/* <label for="username">Name: </label> */}
@@ -156,7 +156,7 @@ const PropertyDetails = (props) => {
                     </div>
             </CustomModal>
             <AgentDescription selectedRealtor={props.selectedRealtor}/>
-            <CustomModal modalWidth="w-50percent" displayStyle={displayModal2} title="Request a tour of this property." subtitle="We can also show other properties that might be a good fit for you." changeDisplayStyle={changeDisplayStyle2}>
+            <CustomModal icon="calendar" modalWidth="w-50percent" displayStyle={displayModal2} title="Request a tour of this property." subtitle="We can also show other properties that might be a good fit for you." changeDisplayStyle={changeDisplayStyle2}>
                   <div>
                           {/* <form> */}
                               {/* <label for="username">Name: </label> */}
@@ -165,6 +165,28 @@ const PropertyDetails = (props) => {
                               <input className="m-bottom20" type="text" id="email" name="email" defaultValue={"testemail@gmail.com"}></input><br></br>
                               {/* <label for="desc">Phone: </label> */}
                               <input className="m-bottom20" type="text" id="phone" name="phone" placeholder="Phone (optional)"></input><br></br>
+                              <label>Time preference for tour? </label>
+                              <div class="checkbox-block-group">
+                                <div className="checkbox-block">
+                                    {/* <!--checkbox 1--> */}
+                                    <input className="checkbox-effect checkbox-effect-2" id="weekday" type="radio" value="weekday" name="day"/>
+                                    <label for="weekday">Weekday</label>
+                                    {/* <!--checkbox 2--> */}
+                                    <input className="checkbox-effect checkbox-effect-2" id="weekend" type="radio" value="weekend" name="day"/>
+                                    <label for="weekend">Weekend</label>
+                                </div>
+                                <div className="checkbox-block">
+                                    {/* <!--checkbox 1--> */}
+                                    <input className="checkbox-effect checkbox-effect-2" id="mornings" type="radio" value="mornings" name="time"/>
+                                    <label for="mornings">Mornings</label>
+                                    {/* <!--checkbox 2--> */}
+                                    <input className="checkbox-effect checkbox-effect-2" id="afternoons" type="radio" value="afternoons" name="time"/>
+                                    <label for="afternoons">Afternoons</label>
+                                    {/* <!--checkbox 3--> */}
+                                    <input className="checkbox-effect checkbox-effect-2" id="evenings" type="radio" value="evenings" name="time"/>
+                                    <label for="evenings">Evenings</label>
+                                </div>
+                              </div>
                               <textarea className="m-bottom20" type="text" id="comment" name="comment" placeholder="Comments" rows="2"></textarea><br></br>
                               <div className="center">
                                 <button name="send" onClick={scheduleTour} className="p-10 btnHover">SEND</button>
