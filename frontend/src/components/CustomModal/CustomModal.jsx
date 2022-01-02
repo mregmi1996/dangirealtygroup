@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from "prop-types";
 import './CustomModal.scss';
 import { FaCommentDots } from 'react-icons/fa'
+import { FaCalendarCheck } from 'react-icons/fa'
 
 function CustomModal(props) {
     return (
@@ -10,9 +11,16 @@ function CustomModal(props) {
                 {/* changeDisplayStyle function gets called when user presses cross button to close the modal */}
               <a onClick={() => props.changeDisplayStyle("close")}><span className="close-modal">&times;</span></a>
               <div>
-                <div className="center-icon">
-                    <FaCommentDots size="35px" color="#555863"/>
-                </div>
+                {
+                    props.icon === "comment" ? 
+                    <div className="center-icon">
+                        <FaCommentDots size="35px" color="#555863"/>
+                    </div>
+                    :
+                    <div className="center-icon">
+                        <FaCalendarCheck size="35px" color="#555863"/>
+                    </div>
+                }
                 <p className="modal-font title">
                     {props.title}
                 </p>
