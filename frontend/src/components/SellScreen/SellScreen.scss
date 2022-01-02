@@ -1,0 +1,98 @@
+.sell-container{
+    height: 400px;
+    width: 100%;
+    background-image: url("../../assets/images/buy-a-property.jpeg") ;
+    .searchbox{
+        padding-top: 70px;
+        margin-left: 120px;
+        opacity: 0.85;
+    }
+}
+
+.sell-form-container {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+}
+
+.sell-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.w-49percent {
+    width: 49%;
+}
+
+.w-30percent {
+    width: 30%;
+}
+
+.w-19percent {
+    width: 19%;
+}
+
+.w-100percent {
+    width: 100%;
+}
+
+.m-bottom20 {
+    margin-bottom: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+button[name="submit"] {
+    display: inline-block;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #19469D;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 20px;
+    height: 40px;
+    width: 40%;
+    color: #19469D;
+}
+
+button[name="submit"]:hover {
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #19469D;
+}
+
+input[type="file"] {
+    display: inline-block;
+    border-width: 1px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 20px;
+    height: 45px;
+    width: 100%;
+    color: #19469D;
+}
+
+.sell-form label {
+    font-size: 15px;
+    color: rgb(95, 93, 93);
+    font-weight: 500;
+}
+
+.sell-form-container h2 {
+    font-size: 35px;
+}
