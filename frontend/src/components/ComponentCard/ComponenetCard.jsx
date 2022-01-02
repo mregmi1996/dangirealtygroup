@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 const ComponentCard=(props)=> {
 
   return (
-    <Card sx={{ maxWidth: 500 }} onClick={props.clickHandler}>
+    <Card sx={{ minWidth: 500 }} onClick={props.clickHandler}>
       <CardActionArea>
         <CardMedia
           component="img"

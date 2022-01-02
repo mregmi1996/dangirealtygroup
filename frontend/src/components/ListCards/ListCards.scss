@@ -2,12 +2,12 @@
     margin-left: 30px;
 }
 .housing-lists{
-    margin: 20px 0px 20px 20px;
+    margin: 20px 0px 20px 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,2fr);
     grid-template-rows: 4;
     gap: 40px;
-    grid-column-gap: 0px;
+    grid-column-gap: 50px;
     grid-auto-flow: row;
     width: 100%;
 }
