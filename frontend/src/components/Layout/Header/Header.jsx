@@ -8,6 +8,9 @@ const Header = () => {
     const buyClickHandler = ()=>{
         navigate("/buy");
     }
+    const sellClickHandler = ()=>{
+        navigate("/sell");
+    }
     const agentsClickHandler=()=>{
         navigate("/agents");
     }
@@ -19,7 +22,7 @@ const Header = () => {
             <div>
             <ul>
                 <li className="header-li" onClick={()=>buyClickHandler()}><a>Buy</a></li>
-                <li className="header-li"><a>Sell</a></li>
+                <li className="header-li" onClick={()=>sellClickHandler()}><a>Sell</a></li>
                 <li className="header-li" onClick={()=>agentsClickHandler()}><a>Agents</a></li>
                 <li className="header-li"><a>Join Us!</a></li>
             </ul>
