@@ -22,12 +22,6 @@ const ListCards = (props) => {
                 <ActionAreaCard clickHandler={PropertyClickHandler}/>
                 <ActionAreaCard clickHandler={PropertyClickHandler}/>
                 <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
             </div>
         </div>
     )
