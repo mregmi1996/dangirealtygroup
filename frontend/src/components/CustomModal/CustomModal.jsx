@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import './CustomModal.scss';
 import { FaCommentDots } from 'react-icons/fa'
 import { FaCalendarCheck } from 'react-icons/fa'
+import { FaSignInAlt } from 'react-icons/fa'
 
 function CustomModal(props) {
     return (
@@ -17,8 +18,13 @@ function CustomModal(props) {
                         <FaCommentDots size="35px" color="#555863"/>
                     </div>
                     :
+                    props.icon === "calendar" ?
                     <div className="center-icon">
                         <FaCalendarCheck size="35px" color="#555863"/>
+                    </div>
+                    :
+                    <div className="center-icon">
+                        <FaSignInAlt size="35px" color="#555863"/>
                     </div>
                 }
                 <p className="modal-font title">
