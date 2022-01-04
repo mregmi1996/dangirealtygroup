@@ -16,6 +16,10 @@ const RealtorSchema = new Mongoose.Schema({
     "description":{
         type: String,
     },
+    "image":{
+        type:String,
+        default:null
+    }
 },
 {
     versionKey: false

@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import image_1 from '../../../assets/images/temp.jpeg';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import ListCards from '../../ListCards/ListCards';
 import './AgentDescription.scss';
 
 const AgentDescription=(props)=>{
+    const [image, setImage] = useState();
+    useEffect(() => {
+        setImage(`http://localhost:4000/file/${props.selectedRealtor.realtor.image}/`)
+        
+    }, [])
     return(
         <div className="agent-details-main-container">
+            {console.log(props.selectedRealtor.realtor)}
             <div className="agent-name">
                 <h1 className="header-1">{props.selectedRealtor.realtor.name}</h1>
             </div>
             <div className="agent-details">
                 <div className="agent-pic">
-                    <img src={image_1} />
+                    <img src={image} />
                 </div>
                 <div className="agent-about-container">
                     <div className="agent-about">

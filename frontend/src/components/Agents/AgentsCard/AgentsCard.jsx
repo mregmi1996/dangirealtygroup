@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,6 +10,8 @@ import { useDispatch } from 'react-redux';
 import { actionTypes } from '../../../reducers/realtor';
 
 const AgentsCard = ({realtor}) => {
+    const [image, setImage] = useState()
+    useEffect(() => {setImage(`http://localhost:4000/file/${realtor.image}/`)}, [])
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const viewAgentClickHandler=()=>{
@@ -18,7 +20,8 @@ const AgentsCard = ({realtor}) => {
             name: realtor.name,
             email_id: realtor.email_id,
             phone: realtor.phone,
-            description: realtor.description
+            description: realtor.description,
+            image: realtor.image
         })
         navigate("/agentDetails")
     }
@@ -28,8 +31,8 @@ const AgentsCard = ({realtor}) => {
                 <CardMedia
                     component="img"
                     alt="agent"
-                    height="250"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    height="450"
+                    image={image}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
