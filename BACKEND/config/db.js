@@ -9,7 +9,7 @@ const DB = process.env.DB;
 
 
 console.log(`${URI}://${USERNAME}:${PASSWORD}@${HOST}/${DB}`)
-mongoose.connect(`${URI}://drg:${PASSWORD}@${HOST}/${DB}`, {
+mongoose.connect(`${URI}://${USERNAME}:${PASSWORD}@${HOST}/${DB}`, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
