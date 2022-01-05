@@ -1,11 +1,13 @@
 import realtorReducer from "./realtor";
+import userReducer from "./user";
 import {combineReducers} from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from "redux-persist/lib/storage";
 import { createStore } from 'redux';
 
 const allReducers=combineReducers({
-    realtorReducer: realtorReducer
+    realtorReducer: realtorReducer,
+    userReducer: userReducer
 });
 
 

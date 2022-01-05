@@ -9,7 +9,7 @@ const DB = process.env.DB;
 
 
 console.log(`${URI}://${USERNAME}:${PASSWORD}@${HOST}/${DB}`)
-mongoose.connect(`mongodb+srv://drg:Node%23112233@cluster0.osnlp.mongodb.net/DangiRealtyGroup`, {
+mongoose.connect(`${URI}://${USERNAME}:${PASSWORD}@${HOST}/${DB}`, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
