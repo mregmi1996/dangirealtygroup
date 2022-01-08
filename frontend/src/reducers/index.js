@@ -12,7 +12,7 @@ const allReducers=combineReducers({
 
 
 const persistConfig={
-    key:"persist-key",
+    key:"primary",
     storage
 }
 
