@@ -14,6 +14,7 @@ export const searchForLocations=(htmlComponent)=>{
 }
 
 export const buildQueryString=(params)=>{
+    console.log("check12 "+JSON.stringify(params))
     return "https://idx.mlspin.com/rslts.asp?aid=BB815751&id=32323&type=sf&type=mf&type=cc&type=ld&type=ci&type=bu&type=rn&type=mh&rdSoldSearch=N&optTime=3&min=0&max=99999999&twn=ACTN&twn=01A&twn=01B&twn=01C&twn=01D&twn=ADAM&twn=AGAW&twn=ALFD&twn=AMHR&twn=ANDO&twn=ARLG&twn=01X&twn=01Y"
 }
 
