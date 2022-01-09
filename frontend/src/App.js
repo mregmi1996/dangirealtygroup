@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomescreenPane from "./components/HomescreenPane/HomescreenPane";
 import Layout from "./components/Layout/Layout";
 import BuyScreen from "./components/BuyScreen/BuyScreen";
+import JoinScreen from "./components/JoinScreen/JoinScreen";
 import SellScreen from "./components/SellScreen/SellScreen";
 import Agents from "./components/Agents/Agents";
 import PropertyDetails from "./components/PropertyDetails/PropertyDetails";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/agents" element={<Layout component={<Agents />} />} />
           <Route path="/agentDetails" element={<Layout component={<AgentDetails selectedRealtor={selectedRealtor}/>} />} />
           <Route path="/viewProperty" element={<Layout component={<PropertyDetails selectedRealtor={selectedRealtor}/>} />} />
+          <Route path="/join" element={<Layout component={<JoinScreen />} />} />
         </Routes>
       </Router>
     </div>
