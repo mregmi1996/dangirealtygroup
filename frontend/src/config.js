@@ -1,5 +1,5 @@
 const configuration = {
-    URL: "http://localhost:4000"
+    URL: "https://dangirealtygroupnode.herokuapp.com"
 }
 
 export default configuration;
