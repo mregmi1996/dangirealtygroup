@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AgentsCard from './AgentsCard/AgentsCard';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import configuration from '../../config';
 
 import './Agents.scss';
 
@@ -10,7 +11,7 @@ const Agents = () => {
     const [agentsList, setAgentsList] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch("http://localhost:4000/getAllRealtors/", {
+        fetch(`${configuration.URL}/getAllRealtors`, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',

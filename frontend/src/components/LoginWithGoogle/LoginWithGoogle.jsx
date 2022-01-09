@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { actionTypes } from '../../reducers/user';
 import { useDispatch, connect } from 'react-redux';
-
+import configuration from '../../config';
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 // import { refreshTokenSetup } from '../utils/refreshToken';
@@ -25,7 +25,7 @@ function LoginWithGoogle(props) {
 
   const checkIfEmailExistsAndRegister = (userProfile) => {
     // check if the email exists in the DB
-    fetch(`http://localhost:4000/validate/${userProfile.email}`, {
+    fetch(`${configuration.URL}/validate/${userProfile.email}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ function LoginWithGoogle(props) {
         lastName: userProfile.familyName,
     }
     // call user post
-    fetch(`http://localhost:4000/users`, {
+    fetch(`${configuration.URL}/users`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
@@ -86,7 +86,7 @@ function LoginWithGoogle(props) {
         lastName: userProfile.familyName,
     }
     // call user post
-    fetch(`http://localhost:4000/login`, {
+    fetch(`${configuration.URL}/login`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'

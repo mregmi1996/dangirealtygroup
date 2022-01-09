@@ -8,10 +8,11 @@ import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { actionTypes } from '../../../reducers/realtor';
+import configuration from '../../../config';
 
 const AgentsCard = ({realtor}) => {
     const [image, setImage] = useState()
-    useEffect(() => {setImage(`http://localhost:4000/file/${realtor.image}/`)}, [])
+    useEffect(() => {setImage(`${configuration.URL}/file/${realtor.image}/`)}, [])
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const viewAgentClickHandler=()=>{

@@ -6,6 +6,7 @@ import CustomModal from '../CustomModal/CustomModal';
 import LoginWithGoogle from '../LoginWithGoogle/LoginWithGoogle';
 import { actionTypes } from '../../reducers/user';
 import { useDispatch } from 'react-redux';
+import configuration from '../../config';
 
 
 const LoginSignup = (props) => {
@@ -55,7 +56,7 @@ const LoginSignup = (props) => {
               phoneNumber: phoneNumber
           }
           // call user post
-          fetch(`http://localhost:4000/users`, {
+          fetch(`${configuration.URL}/users`, {
               method: 'POST',
               headers: {
                   'Content-type': 'application/json'
@@ -88,7 +89,7 @@ const LoginSignup = (props) => {
         phoneNumber: phoneNumber
       }
       // call user post
-      fetch(`http://localhost:4000/login`, {
+      fetch(`${configuration.URL}/login`, {
           method: 'POST',
           headers: {
               'Content-type': 'application/json'
@@ -160,7 +161,7 @@ const LoginSignup = (props) => {
         else {
           setEmail(e.target.value);
           if (e.target.value.trim().length !== 0) {
-              fetch(`http://localhost:4000/validate/${e.target.value}`, {
+              fetch(`${configuration.URL}/validate/${e.target.value}`, {
                   method: 'GET',
                   headers: {
                       'Content-Type': 'application/json'
@@ -200,7 +201,7 @@ const LoginSignup = (props) => {
       else {
         setEmail(e.target.value);
         if (e.target.value.trim().length !== 0) {
-            fetch(`http://localhost:4000/validate/${e.target.value}`, {
+            fetch(`${configuration.URL}/validate/${e.target.value}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

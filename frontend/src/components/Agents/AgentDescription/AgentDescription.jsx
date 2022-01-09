@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import image_1 from '../../../assets/images/temp.jpeg';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import ListCards from '../../ListCards/ListCards';
+import configuration from '../../../config';
 import './AgentDescription.scss';
 
 const AgentDescription=(props)=>{
     const [image, setImage] = useState();
     useEffect(() => {
-        setImage(`http://localhost:4000/file/${props.selectedRealtor.realtor.image}/`)
+        setImage(`${configuration.URL}/file/${props.selectedRealtor.realtor.image}/`)
         
     }, [])
     return(
