@@ -26,7 +26,7 @@ ul {
     text-align: center;
     padding: 20px;
     padding-top: 35px;
-    padding-left: 60px;
+    padding-left: 35px;
     text-decoration: none;
     &:hover{
         transform: scale(1.1);
@@ -41,20 +41,22 @@ ul {
     float:right;
     margin-left: 600px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
     .custom-button{
         background-color: $base-color;
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 12px 22px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        margin: 4px 2px;
+        height: 60px;
+        margin-right: 20px;
         cursor: pointer;
         &:hover{
             transform: scale(1.1);
         }
     }
 }
-

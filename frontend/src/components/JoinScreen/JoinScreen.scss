@@ -1,0 +1,56 @@
+.join-container{
+    height: 400px;
+    width: 100%;
+    background-image: url("../../assets/images/buy-a-property.jpeg") ;
+    padding-top: 50px;
+    .box{
+        padding: 30px;
+        margin-left: 120px;
+        margin-right: 120px;
+        opacity: 0.75;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .join-text-title {
+        color: white;
+        font-size: 40px;
+    }
+    
+    .join-text-para {
+        color: white;
+        width: 600px;
+        font-size: 20px;
+    }
+
+    .apply-button {
+        padding-top: 150px;
+        padding-right: 40PX;
+    }
+
+    button[name="applyForAgent"] {
+        display: inline-block;
+        border-width: 1px;
+        border-radius: 5px;
+        border-color: #19469D;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        background-color: #FFFFFF;
+        text-align: center;
+        transition: all 0.2s;
+        box-shadow: 20px;
+        height: 40px;
+        // width: 15%;
+        color: #19469D;
+    }
+    
+    button[name="applyForAgent"]:hover {
+        font-weight: 800;
+        color: #ffffff;
+        background-color: #19469D;
+    }
+    
+}
