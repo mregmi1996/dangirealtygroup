@@ -10,12 +10,13 @@ import PropertyDetails from "./components/PropertyDetails/PropertyDetails";
 import './App.css';
 import AgentDetails from "./components/Agents/AgentDetails/AgentDetails";
 import { useSelector } from "react-redux";
+import configuration from "./config";
 
 function App() {
   const [address, setAddress] = useState();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:4000/getSearchBar/", {
+    fetch(`${configuration.URL}/getSearchBar/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',

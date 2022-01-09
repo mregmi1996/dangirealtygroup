@@ -4,12 +4,13 @@ import ListCards from '../ListCards/ListCards';
 import ActionAreaCard from '../ComponentCard/ComponenetCard';
 import Searchbox from '../Searchbox/Searchbox';
 import Filter from '../Filter/Filter';
+import configuration from '../../config';
 
 const BuyScreen = (props) => {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch("http://localhost:4000/getListings/", {
+        fetch(`${configuration.URL}/getListings/`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

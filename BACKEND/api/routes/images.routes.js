@@ -1,11 +1,13 @@
 import { gfs } from '../../config/db.js';
 import upload from '../services/images.service.js';
 import express from 'express';
+import configuration from '../../config.js';
+
 const router =  express.Router();
 
 router.post("/fileupload", upload.single("file"), (req,res)=>{
     if(req.file===undefined) return res.send("No file selected");
-    const imgURL = `http://localhost:4000/file/${req.file.filename}`;
+    const imgURL = `${configuration.URL}/file/${req.file.filename}`;
     return res.send(imgURL); 
 })
 
