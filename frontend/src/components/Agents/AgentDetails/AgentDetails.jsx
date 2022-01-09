@@ -8,10 +8,6 @@ const AgentDetails=(props)=>{
     return(
         <div>
            <AgentDescription selectedRealtor={props.selectedRealtor}/>
-            <div className="agent-listings">
-                <Filter/>
-                <ListCards text="My Listings:"/>
-            </div>
         </div>
     )
 }

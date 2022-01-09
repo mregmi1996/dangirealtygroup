@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -11,15 +11,17 @@ import './Searchbox.scss';
 
 const Searchbox = (props) => {
     const [apartment, setApartment] = React.useState('');
-
+    // useEffect(() => {
+    //    console.log(props.address) 
+    // }, [])
     const handleChange = (event) => {
         setApartment(event.target.value);
     };
     const top100Films = [
-        { label: 'Somerville, MA', state:"Massachussets" },
-        { label: 'Medford, MA', state:"Massachussets" },
-        { label: 'Malden, MA', state:"Massachussets" },
-        { label: 'Boston, MA', state:"Massachussets" }
+        { label: 'Somerville, MA'},
+        { label: 'Medford, MA'},
+        { label: 'Malden, MA' },
+        { label: 'Boston, MA'}
     ]
     return (
         <div className="search-box-container">
@@ -51,7 +53,7 @@ const Searchbox = (props) => {
                     <Autocomplete
                         disablePortal
                         id="combo-box-demo"
-                        options={top100Films}
+                        options={props.address}
                         sx={{ width: 300}}
                         renderInput={(params) => <TextField {...params} label="Location" />}
                     />

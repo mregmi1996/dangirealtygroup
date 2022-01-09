@@ -16,12 +16,12 @@ const ListCards = (props) => {
                 </h1>
             </div>
             <div className="housing-lists">
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
-                <ActionAreaCard clickHandler={PropertyClickHandler}/>
+                {
+                    (props.properties).map((key,index)=>{
+                        console.log(key)
+                        return(<ActionAreaCard properties={key} clickHandler={PropertyClickHandler}/>)
+                    })
+                }
             </div>
         </div>
     )
