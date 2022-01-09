@@ -19,10 +19,10 @@ const ComponentCard=(props)=> {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.properties.MLS}
+            {props.properties.Address}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Insert custom component here
+          <Typography variant="h5" color="text.secondary">
+            {props.properties.Price}         {props.properties.PropertyType}
           </Typography>
         </CardContent>
       </CardActionArea>
