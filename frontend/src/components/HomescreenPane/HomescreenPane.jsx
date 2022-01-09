@@ -54,7 +54,7 @@ const HomescreenPane = (props) => {
                     <div className="subtitle">
                         Search For A Property:
                     </div>
-                    <Searchbox />
+                    <Searchbox address={props.address} />
                 </div>
                 <div>
                     <div className="main-container-hero" style={{ backgroundImage: `url(${img})` }} />

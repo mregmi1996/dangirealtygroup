@@ -7,6 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 const ComponentCard=(props)=> {
 
+
   return (
     <Card sx={{ minWidth: 500 }} onClick={props.clickHandler}>
       <CardActionArea>
@@ -18,7 +19,7 @@ const ComponentCard=(props)=> {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            House
+            {props.properties.MLS}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Insert custom component here
