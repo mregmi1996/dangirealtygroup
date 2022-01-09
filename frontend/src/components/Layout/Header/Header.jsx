@@ -26,6 +26,9 @@ const Header = (props) => {
     const agentsClickHandler=()=>{
         navigate("/agents");
     }
+    const joinUsHandler=()=>{
+        navigate("/join");
+    }
     const loginSignupClickHandler=()=>{
         setDisplaySignUpModal("view");
     }
@@ -56,7 +59,7 @@ const Header = (props) => {
                 <li className="header-li" onClick={()=>buyClickHandler()}><a>Buy</a></li>
                 <li className="header-li" onClick={()=>sellClickHandler()}><a>Sell</a></li>
                 <li className="header-li" onClick={()=>agentsClickHandler()}><a>Agents</a></li>
-                <li className="header-li"><a>Join Us!</a></li>
+                <li className="header-li" onClick={()=>joinUsHandler()}><a>Join Us!</a></li>
             </ul>
             </div>
             <div className="login">
